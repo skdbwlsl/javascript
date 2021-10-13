@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+/*
+var comName = prompt("당신의 이름은?")
+var comAge = prompt(comName + "당신의 나이는?")
+var comAdd = prompt(comName + "당신의 주소는?")
+document.write("<table border = '1'><tr>")
+document.write("<th>이름</th><th>나이</th><th>주소</th></tr>")
+document.write("<tr><td>" +comName+"</td><td></td> <td></td> </tr></table>")
+*/
+
+
+/*quiz2*/
+var num = prompt("아파트 층수 입력 :");
+document.write("<hr><table border = '1'>");
+for(;num>0;num--){
+	document.write("<tr>");
+	for(j=1;j<5;j++){
+		document.write("<td>"+(num*100+j)+"호</td>");
+	}
+	document.write("</tr>");
+} 
+document.write("</table>");
+
+
+</script>
+	
+	
+</body>
+</html>
