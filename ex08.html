@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	var img
+	function add(){
+		img = document.createElement("img")
+		img.setAttribute("src","img.jpg")
+		//img.src = "img.jpg"
+		//img.width = 100
+		//img.style.height = "100px"
+		img.id = "img"
+		img.setAttribute('class','img2')       //setAttribute로 class추가해서도 가능
+		
+		//document.body.appendChild(img)
+		document.getElementById('test').appendChild(img)
+	}
+	function remove(){
+		//document.body.removeChild(img)
+		//document.getElementById('test').removeChild(img)    //이렇게 삭제해도 되고
+		document.getElementById('test').innerHTML = 'test'    //innerHTML로 모든값을 바꾼다
+	}
+</script>
+<style type="text/css">
+	#img { width:50px; }
+	.img2{  height: 50px; }                    /*setAttribute에 대한 스타일 설정하기*/
+</style>
+</head>
+<body>
+	<p id="test">test</p>
+	<a href="#" onclick="add()">[이미지 추가]</a>
+	<a href="#" onclick="remove()">[이미지 삭제]</a>
+</body>
+</html>

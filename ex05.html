@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div id='tab'>111</div>
+
+	<script type="text/javascript">
+		var city = ['서울','부산','대전']
+		var joindata1 = city.join()
+		var joindata2 = city.join('-그리고')
+		document.write('결과 1 : '+joindata1 +"<br>")
+		document.write('결과 2 : '+joindata2 + "<br>")
+		
+		var p1 = city.push('대구','강원도')
+		document.write('push : '+p1 + "<br>")
+		document.write('city : '+city + "<br>")
+		
+		city.pop()
+		document.write('city : '+city + "<br>")
+		
+		city.unshift('강원도')
+		document.write('city : '+city + "<br>")
+		
+		city.shift()
+		document.write('city : '+city + "<br>")
+		
+		for(i=0 ; i<city.length ; i++){
+			document.write("for : "+city[i] + "<br>")
+		}
+		
+		function testArr(item, index){
+			document.write("실행 : "+item + index + "<br>")
+		}
+		city.forEach(testArr)
+		// 배열에 1 ~ 10까지 저장 후 합을 구해주세요
+		var data = [1,2,3,4,5,6,7,8,9,10]
+		var sum = 0
+		function sumFunc(item){
+			sum += item	
+		}
+		data.forEach(sumFunc)
+		document.write("1~10 합 : " + sum + "<br>")
+		
+		var data = {'key1':100, 'key2':200}
+		document.write(data.key1 + "," + data['key2']+"<br>")
+		
+		var data = [
+			{'id':111,'name':'홍길동1','addr':'산골짜기1'},
+			{'id':222,'name':'홍길동2','addr':'산골짜기2'},
+			{'id':333,'name':'홍길동3','addr':'산골짜기3'},
+			{'id':444,'name':'홍길동4','addr':'산골짜기4'}
+			]
+		html ="<table border='1'><tr><th>id</th><th>name</th><th>addr</th></tr>"
+		function printData(items){
+			html += "<tr>"
+			html += "<td>"+ items.id +"</td>"
+			html += "<td>"+ items.name +"</td>"
+			html += "<td>"+ items['addr'] +"</td>"
+			html += "</tr>"
+			document.write(items.id + items.name + items['addr']+"<br>")
+			console.log(items)
+		}
+		data.forEach(printData)
+		html += "</table>"
+		document.getElementById('tab').innerHTML = html
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
