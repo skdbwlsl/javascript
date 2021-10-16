@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function btnMove() {
+	var n = document.getElementById('name')
+	console.log(n.value)
+	console.log(n.value==null)
+	console.log(n.value=="")
+	if(n==null){
+		alert("아이디는 필수입니다")
+	}
+	
+}
+
+</script>
+</head>
+<body>
+	<input type="text" id = "id" onchange="password()"><br>
+	<input type="text" id = "password" ><br>
+	<input type="text" id = "pwdchk" >확인!!<br>
+	<input type="text" id = "name" ><br>
+<hr>
+	<input type="button" value="클릭" onclick="btnMove()"><br>
+	
+</body>
+</html>

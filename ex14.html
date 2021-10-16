@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#tagAdd  { width: 300px;  border: 1px solid #999999;}
+	tr:nth-child(even) {background-color: beige;} 
+	
+	/*아이디 추가*/
+	#accountCel {width: 40%; text-align:  center;}
+	.balanceCel { text-align: center;}
+</style>
+<script type="text/javascript">
+	function tagAddFunc() {
+		let DBdata = [//데이터 가져오기
+			{'name':'홍길동','addr':'산골짜기'},
+			{'name':'김개똥','addr':'개똥별'},
+			{'name':'고도리','addr':'동양화'},
+			{'name':'고길동','addr':'마포구'}
+		]
+		let table = document.getElementById('tagAdd')  //table에 대한 tagAdd를 가져온다
+		for(i=0; i<DBdata.length;i++){
+			tr = document.createElement('tr')  //한줄 추가할 떄마다 tr이 추가되고,td로 내용넣고,  
+			tdN = document.createElement('td')  
+			tdN.innerHTML = DBdata[i].name    //td에 넣을 내용을 적는다
+			tdN.id = 'accountCel'
+			tr.appendChild(tdN)
+			
+			tdA = document.createElement('td')  
+			tdA.innerHTML = DBdata[i].addr    //주소 넣은것을
+			tdA.className = 'balanceCel'       //class 추가하기
+			tr.appendChild(tdA)               //추가한다
+			
+			table.appendChild(tr)
+		}
+	}
+</script>
+</head>
+<body onload="tagAddFunc()">
+	<table id = "tagAdd">
+		<tr><th> 이 &nbsp; &nbsp; 름</th><th>주  &nbsp;  &nbsp; 소</th></tr>
+	</table>
+</body>
+</html>
